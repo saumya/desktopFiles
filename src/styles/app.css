@@ -1,0 +1,33 @@
+/* application */
+body{
+	background-color: #DDDDDD;
+}
+
+video {
+	border: solid;
+	border-width: 4px;
+	border-color: white;
+}
+
+ul{
+	/*list-style: none;*/
+}
+li {
+	list-style-type: none;
+	padding:0.2em;
+}
+
+.clsName{
+	background-color: #ffeab9;
+
+    user-select: none;
+    cursor: default;
+
+    padding:0.2em;
+
+}
+
+#idApp{
+	height: 10em;
+	overflow: scroll;
+}

@@ -19,7 +19,11 @@ $(document).on('click', '.clsName', function(evt){
 	//console.log( t );
 
 	var fileName = $(this).text();
-	console.log( fileName );
+	//console.log( fileName );
+
+	var videoPath = folderPath + fileName;
+	var vElm = document.getElementById("idVideo");
+	vElm.src = videoPath;
 });
 
 
