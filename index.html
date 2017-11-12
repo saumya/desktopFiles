@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    
+    <title>Ray Files.</title>
+
   </head>
+  
   <body>
-    <h1>Hello World!</h1>
+    <h1>Ray Files</h1>
+    <!--
     We are using node <script>document.write(process.versions.node)</script>,
     Chrome <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
+    -->
+    <div id="idApp"></div>
   </body>
+
+  <!-- Ref: https://stackoverflow.com/questions/32621988/electron-jquery-is-not-defined#37480521 -->
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+  <script type="text/javascript" src="src/libs/jquery-3.2.1.js"></script>
   <script type="text/javascript" src="src/app.js"></script>
+  <!-- Insert this line after script imports -->
+  <script>if (window.module) module = window.module;</script>
+
 </html>
