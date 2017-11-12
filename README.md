@@ -4,7 +4,7 @@ Ray Files
 
 #### Basics to start with [Electron][1]
 
- - npm init
+ - Begin with `npm init`
  - install electron `npm install electron --save-dev --save-exact`
  - add start script to `package.json` as `./node_modules/.bin/electron .`
  - start with `npm start`
