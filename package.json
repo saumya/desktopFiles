@@ -1,0 +1,23 @@
+{
+  "name": "rfiles",
+  "version": "1.0.0",
+  "description": "A file informer",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com"
+  },
+  "keywords": [
+    "native",
+    "desktop",
+    "js"
+  ],
+  "author": "saumya",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "1.7.9"
+  }
+}
