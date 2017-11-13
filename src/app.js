@@ -1,10 +1,13 @@
-console.log('app.js');
-// version : 0.1.0
-/*
+//
+// version : 1.0.0
+// console.log('app.js');
+//
 $(function(){
 	console.log('Ready');
+	// first time
+	renderFilesFromFolder(folderPath)
 });
-*/
+
 
 const fs = require('fs');
 const path = require("path");
@@ -61,6 +64,8 @@ var renderFilesFromFolder = function(folderPath){
 		$('#idApp').append(sUL);
 	});	
 }
+
+
 
 
 
