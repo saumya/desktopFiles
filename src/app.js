@@ -35,18 +35,14 @@ fs.readdir(folderPath, 'utf8', (err, files) => {
 		console.log('ERROR:',err);
 	}
 	
-	console.log('Files:',files);
-	//TODO: render the list of files
-
-	//var sUL = '<ul>';
+	//console.log('Files:',files);
+	var sUL = '<ul>';
 	files.forEach(file => {
 		s1 = '<li><span class="clsName">'+path.basename(file)+'</span></li>';
-		//sUL += s1;
-		$('#idApp').append(s1);
+		sUL += s1;
 	});
-	//sUL += '</ul>';
-
-	//$('#idApp').append(sUL);
+	sUL += '</ul>';
+	$('#idApp').append(sUL);
 });
 
 

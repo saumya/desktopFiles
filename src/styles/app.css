@@ -10,24 +10,34 @@ video {
 }
 
 ul{
-	/*list-style: none;*/
+	list-style: none;
+	margin-left: -2em;
 }
 li {
-	list-style-type: none;
+	/*list-style-type: none;*/
 	padding:0.2em;
 }
 
 .clsName{
-	background-color: #ffeab9;
+	background-color: #cccccc;
 
-    user-select: none;
-    cursor: default;
+	user-select: none;
+	cursor: default;
 
-    padding:0.2em;
+	padding:0.2em;
+
+	display: inline-block;
+	width: 26em;
+
+	color: #000000;
 
 }
 
 #idApp{
-	height: 10em;
+	height: 16em;
 	overflow: scroll;
+	overflow-x: hidden;
+
+	background-color: #dddddd;
+	margin-top: 0.1em;
 }
