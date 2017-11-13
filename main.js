@@ -24,7 +24,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  //win.webContents.openDevTools()
+  win.webContents.openDevTools()
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -33,8 +33,8 @@ function createWindow () {
     // when you should delete the corresponding element.
     win = null
   })
+  /*
   // ==========================  Menu ==========================
-
   //const template1 = [];
   const template1 = [
       {
@@ -56,6 +56,7 @@ function createWindow () {
   const menu = Menu.buildFromTemplate(template1)
   Menu.setApplicationMenu(menu)
   // ========================== /Menu ==========================
+  */
 }
 
 // This method will be called when Electron has finished

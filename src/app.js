@@ -36,10 +36,10 @@ $('#idBtnChooseFolder').on('click',function(evt){
 	console.log('folder selection');
 	const {dialog} = require('electron').remote;
 	dialog.showOpenDialog({properties: ['openFile', 'openDirectory', 'multiSelections']},function(files){
-		console.log('files',files);
-		console.log('folderPath',folderPath);
+		//console.log('files',files);
+		//console.log('folderPath',folderPath);
 		folderPath = files[0];
-		console.log('folderPath',folderPath);
+		//console.log('folderPath',folderPath);
 		//
 		$('#idApp').html("");
 		renderFilesFromFolder(folderPath);
@@ -59,8 +59,29 @@ var renderFilesFromFolder = function(folderPath){
 		//console.log('Files:',files);
 		var sUL = '<ul>';
 		files.forEach(file => {
-			s1 = '<li><span class="clsName">'+path.basename(file)+'</span></li>';
-			sUL += s1;
+			
+			const fileName = path.basename(file);
+			if(fileName.indexOf('.')===0){
+				//Do Nothing
+				// Removing the .Files from the list
+			}else{
+				//
+				const fileStats = fs.statSync(folderPath+file);
+				//console.log('stats',fileStats);
+
+				const fileSizeInBytes = fileStats.size;
+				const fileSizeInMB = parseFloat( fileSizeInBytes/1000000 ).toFixed(2); // made to show only 2 decimal points
+				const fileLastOpened = fileStats.atime; //access time
+				const fileLastModified = fileStats.mtime; //modified time
+				const filebirth = fileStats.birthtime; //birth time
+				
+				//console.log('file',file);
+				//console.log('fileSizeInBytes',fileSizeInBytes);
+
+				s1 = '<li><span class="clsName">'+fileName+'</span>'+'<span> '+fileSizeInMB+' mb. </span>'+'</li>';
+				sUL += s1;
+			}
+
 		});
 		sUL += '</ul>';
 		$('#idApp').append(sUL);
