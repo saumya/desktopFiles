@@ -28,6 +28,8 @@ $(document).on('click', '.clsName', function(evt){
 	var videoPath = folderPath + '/' + fileName;
 	var vElm = document.getElementById("idVideo");
 	vElm.src = videoPath;
+	//
+	$('#idInfo').html(fileName);
 });
 
 $('#idBtnChooseFolder').on('click',function(evt){

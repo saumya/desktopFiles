@@ -12,14 +12,16 @@
   </head>
   
   <body>
-    <h1>Ray Files</h1>
+    <h1>Ray Files <button id="idBtnChooseFolder">Choose Folder</button> </h1>
+
     <!--
     We are using node <script>document.write(process.versions.node)</script>,
     Chrome <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
     -->
-    <div> <button id="idBtnChooseFolder">Choose Folder</button> </div> 
-    <VIDEO id="idVideo" width="400" height="300" controls>
+    <div>  </div> 
+    <h3 id="idInfo"></h3>
+    <VIDEO id="idVideo" width="470" height="300" controls>
       <source src="" type="video/mp4">
     </VIDEO>
     <div id="idApp"></div>

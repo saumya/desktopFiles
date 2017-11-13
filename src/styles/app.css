@@ -18,6 +18,13 @@ li {
 	padding:0.2em;
 }
 
+h1 {
+	margin: 0px;
+}
+h3 {
+	margin: 0px;
+}
+
 .clsName{
 	background-color: #cccccc;
 
@@ -41,3 +48,10 @@ li {
 	background-color: #dddddd;
 	margin-top: 0.1em;
 }
+
+#idBtnChooseFolder{
+	background-color: #f4ffe3;
+	font-size: 0.6em;
+	border-width: 0px;
+}
+
