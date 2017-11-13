@@ -1,10 +1,16 @@
-const {app, BrowserWindow} = require('electron')
+// version : 1.0.0
+//
+const {app, BrowserWindow, Menu} = require('electron')
 const path = require('path')
 const url = require('url')
+
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win
+
+
+
 
 function createWindow () {
   // Create the browser window.
@@ -27,6 +33,29 @@ function createWindow () {
     // when you should delete the corresponding element.
     win = null
   })
+  // ==========================  Menu ==========================
+
+  //const template1 = [];
+  const template1 = [
+      {
+        label: app.getName(),
+        submenu: [
+          {
+            label: 'About',
+            accelerator: 'Shift+CmdOrCtrl+H',
+            click() {
+                console.log('VDO. Version 1.0.0')
+            }
+          },
+          {type: 'separator'},
+          {role: 'close'},
+          {role: 'quit'}
+        ]
+      }
+    ];
+  const menu = Menu.buildFromTemplate(template1)
+  Menu.setApplicationMenu(menu)
+  // ========================== /Menu ==========================
 }
 
 // This method will be called when Electron has finished
@@ -53,3 +82,8 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+
+
+
+
