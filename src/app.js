@@ -56,7 +56,7 @@ var renderFilesFromFolder = function(folderPath){
 			console.log('ERROR:',err);
 		}
 		
-		//console.log('Files:',files);
+		console.log('Files:',files);
 		var sUL = '<ul>';
 		files.forEach(file => {
 			
@@ -66,7 +66,7 @@ var renderFilesFromFolder = function(folderPath){
 				// Removing the .Files from the list
 			}else{
 				//
-				const fileStats = fs.statSync(folderPath+file);
+				const fileStats = fs.statSync(folderPath+'/'+file);
 				//console.log('stats',fileStats);
 
 				const fileSizeInBytes = fileStats.size;
